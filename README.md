@@ -51,20 +51,22 @@ mv .env.example .env
 
 5. configure the file .env
 
-6. Copy index.php in directory public 
+6. configure the file connect resources/js/confconnect.ts
+
+7. Copy index.php in directory public 
 ```sh
 cp index.php public/
 ```
-6. Copy public/index.html in directory resources/views/welcome.blade.php 
+8. Copy public/index.html in directory resources/views/welcome.blade.php 
 ```sh
 cp public/index.html resources/views/welcome.blade.php
 ```
-6. inside your project run the command
+9. inside your project run the command
 ```sh
 php artisan serve --host 0.0.0.0 --port 80
 ```
 
-7. go to address
+10. go to address
 ```sh
 http://127.0.0.1/
 ```
