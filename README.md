@@ -49,11 +49,11 @@ mv .env.example .env
 
 4. Сreate a database by default this is mysql(when creating use utf8mb4)
 
-5. Migrate database
+5. configure the file .env
+6. Migrate database
 ```sh
 php artisan migrate
 ```
-6. configure the file .env
 
 7. configure the file connect resources/js/confconnect.ts
 
