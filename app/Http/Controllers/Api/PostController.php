@@ -33,7 +33,7 @@ class PostController extends Controller
             'list' => $posts
         ], 200);
         
-        // PostsPage.vue
+        // PostsList.vue
     }
 
     /**
