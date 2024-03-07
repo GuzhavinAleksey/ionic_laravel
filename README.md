@@ -75,7 +75,7 @@ php artisan serve --host 0.0.0.0 --port 80
 http://127.0.0.1/
 ```
 enjoy!
-
+Always when rebuild copy index.php public/
 <!-- LICENSE -->
 ## License
 
