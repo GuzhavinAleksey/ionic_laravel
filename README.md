@@ -49,24 +49,28 @@ mv .env.example .env
 
 4. Сreate a database by default this is mysql(when creating use utf8mb4)
 
-5. configure the file .env
+5. Migrate database
+```sh
+php artisan migrate
+```
+6. configure the file .env
 
-6. configure the file connect resources/js/confconnect.ts
+7. configure the file connect resources/js/confconnect.ts
 
-7. Copy index.php in directory public 
+8. Copy index.php in directory public 
 ```sh
 cp index.php public/
 ```
-8. Copy public/index.html in directory resources/views/welcome.blade.php 
+9. Copy public/index.html in directory resources/views/welcome.blade.php 
 ```sh
 cp public/index.html resources/views/welcome.blade.php
 ```
-9. inside your project run the command
+10. inside your project run the command
 ```sh
 php artisan serve --host 0.0.0.0 --port 80
 ```
 
-10. go to address
+11. go to address
 ```sh
 http://127.0.0.1/
 ```
