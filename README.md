@@ -28,7 +28,7 @@ you need PHP,NODE,Composer,
 1. Clone the repository
 
 ```sh
-git clone https://github.com/larago-go/larago.git
+git clone https://github.com/GuzhavinAleksey/ionic_laravel.git
 ```
 2. Install Ionic
 ```sh
