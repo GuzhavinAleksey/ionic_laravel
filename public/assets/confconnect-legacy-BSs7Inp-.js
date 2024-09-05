@@ -1,0 +1,1 @@
+System.register(["./index-legacy-CbC_At0k.js"],(function(e,t){"use strict";var n;return{setters:[function(e){n=e.z}],execute:function(){e("C",n.create({baseURL:"http://127.0.0.1/api/",headers:{"Content-type":"application/json"}}))}}}));

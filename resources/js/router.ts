@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-/*  
+
+
+
+/*
 / Home_View
 */
 const routes: Array<RouteRecordRaw> = [
@@ -8,6 +11,16 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: '/home'
+  },
+  {
+    path: '/auth/login',
+    name: 'Login',
+    component: () => import('./views/Auth/Login.vue')
+  },
+  {
+    path: '/auth/registr',
+    name: 'Registr',
+    component: () => import('./views/Auth/Registr.vue')
   },
   {
     path: '/home',
@@ -18,17 +31,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/posts',
     name: 'Post_list',
-    component: () => import('./views/PostsList.vue')
+    component: () => import('./views/Post/PostsList.vue')
   },
   {
-    path: '/posts_add',
+    path: '/posts/posts_add',
     name: 'Post_add',
-    component: () => import('./views/PostsAdd.vue')
+    component: () => import('./views/Post/PostsAdd.vue')
   },
   {
     path: '/posts/:id',
     name: 'Post_prev',
-    component: () => import('./views/PostPrev.vue'),
+    component: () => import('./views/Post/PostPrev.vue'),
   },
 ]
 
@@ -36,5 +49,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
+
 
 export default router

@@ -1,69 +1,46 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-import 
-{ 
-   IonContent, 
-   IonHeader, 
-   IonPage, 
-   IonTitle, 
-   IonToolbar,
-   IonButton,
+import
+{
+   IonContent,
+   IonPage,
+   IonText,
 } from '@ionic/vue';
+import HeaderApp from './HeaderApp.vue';
 
-const router = useRouter();
+import SidebarApp from './SidebarApp.vue';
+
+import FooterApp from './FooterApp.vue';
+
 
 </script>
 
-<style scoped>
-#container {
-  text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-</style>
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-      <ion-button router-link="/posts">Posts</ion-button>
-    </ion-header>
+  <IonPage class="flex items-center justify-center h-screen  bg-gray-200">
+    <IonContent class="w-full  bg-white rounded-md shadow-md">
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <SidebarApp />
 
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <div class="w-full bg-gray-100 pl-0 lg:pl-64 min-h-screen" :class="sideBarOpen ? 'overlay' : ''" id="main-content">
+
+        <HeaderApp />
+
+        <div class="p-6 bg-gray-100 mb-20">
+          <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+          <IonText>
+                    <h5 class="p-6 bg-white border-b border-gray-200">
+                        Вы авторизовнны!
+                    </h5>
+          </IonText>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <FooterApp />
+
       </div>
-    </ion-content>
-  </ion-page>
+    </IonContent>
+  </IonPage>
 </template>
-
