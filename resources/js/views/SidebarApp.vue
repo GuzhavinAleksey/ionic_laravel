@@ -2,7 +2,6 @@
 import { computed } from 'vue';
 import
 {
-   IonText,
    useIonRouter,
 } from '@ionic/vue';
 
@@ -22,29 +21,21 @@ const sideBarOpen = computed(() => store.state.sideBarOpen);
     <div class="w-1/2 md:w-1/3 lg:w-64 fixed md:top-0 md:left-0 h-screen lg:block border-r z-30" :class="sideBarOpen ? '' : 'hidden'" style="--tw-bg-opacity: 1;background-color: rgb(28 36 52 / var(--tw-bg-opacity));" id="main-nav">
 
           <div class="w-full h-20 border-b flex px-4 items-center mb-8">
-          <IonText>
            <p class="font-semibold  text-white pl-4">App</p>
-          </IonText>
           </div>
 
           <div class="mb-4 px-4">
-          <IonText>
           <p class="pl-4 text-sm text-gray-600/90 font-semibold mb-1">Главная</p>
-          </IonText>
             <div class="w-full flex items-center  h-10 pl-4  hover:bg-sky-700 rounded-lg cursor-pointer">
               <svg class="h-6 w-6 text-white fill-current mr-2" viewBox="0 0 20 20">
                 <path d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"></path>
               </svg>
-              <IonText>
               <span class="text-white"><p @click="() => router.navigate('/home','forward','replace')">В начало</p></span>
-              </IonText>
             </div>
           </div>
 
           <div class="mb-4 px-4">
-          <IonText>
             <p class="pl-4 text-sm text-gray-600/90 font-semibold mb-1">Posts</p>
-          </IonText>
             <div class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-sky-700 rounded-lg cursor-pointer">
               <svg class="h-6 w-6 text-white fill-current mr-2" viewBox="0 0 20 20">
                 <path d="M17.592,8.936l-6.531-6.534c-0.593-0.631-0.751-0.245-0.751,0.056l0.002,2.999L5.427,9.075H2.491c-0.839,0-0.162,0.901-0.311,0.752l3.683,3.678l-3.081,3.108c-0.17,0.171-0.17,0.449,0,0.62c0.169,0.17,0.448,0.17,0.618,0l3.098-3.093l3.675,3.685c-0.099-0.099,0.773,0.474,0.773-0.296v-2.965l3.601-4.872l2.734-0.005C17.73,9.688,18.326,9.669,17.592,8.936 M3.534,9.904h1.906l4.659,4.66v1.906L3.534,9.904z M10.522,13.717L6.287,9.48l4.325-3.124l3.088,3.124L10.522,13.717z M14.335,8.845l-3.177-3.177V3.762l5.083,5.083H14.335z"></path>

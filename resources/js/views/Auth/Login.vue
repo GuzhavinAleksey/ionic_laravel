@@ -5,9 +5,6 @@ import
 {
    IonContent,
    IonPage,
-   IonInput,
-   IonLabel,
-   IonButton,
    useIonRouter,
 } from '@ionic/vue';
 
@@ -55,31 +52,31 @@ const submit = () => {
       <form class="mt-8 space-y-6" @submit.prevent="submit">
         <div class="rounded-md shadow-sm -space-y-px">
           <div>
-             <IonLabel for="email-address" class="sr-only">email</IonLabel>
-             <IonInput id="email-address" name="email" v-model="datavw.form.email" type="text" autocomplete="email" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="email" ></IonInput>
+             <label for="email-address" class="sr-only">email</label>
+             <input id="email-address" name="email" v-model="datavw.form.email" type="text" autocomplete="email" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="email" ></input>
           </div>
           <div>
-                   <IonLabel for="password" class="sr-only">Пароль</IonLabel>
-<IonInput id="password" name="password" v-model="datavw.form.password" type="password" autocomplete="current-password" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Пароль"></IonInput>
+                   <label for="password" class="sr-only">Пароль</label>
+<input id="password" name="password" v-model="datavw.form.password" type="password" autocomplete="current-password" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Пароль"></input>
           </div>
         </div>
 
 
         <div>
-          <IonButton type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <span class="absolute left-0 inset-y-0 flex items-center pl-3">
               <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
             </span>
           Вход
-          </IonButton>
+          </button>
         </div>
       </form>
-          <IonButton
+          <button
             @click="() => router.navigate('/auth/registr','forward','replace')"
             class="w-full px-4 py-2 text-sm text-center text-white bg-indigo-600 rounded-md focus:outline-none hover:bg-indigo-500"
           >
           Регистрация
-          </IonButton>
+          </button>
     </IonContent>
   </IonPage>
 </template>

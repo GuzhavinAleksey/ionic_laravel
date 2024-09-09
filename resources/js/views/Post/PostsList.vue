@@ -6,7 +6,6 @@ import
 {
    IonContent,
    IonPage,
-   IonButton,
    useIonRouter,
 } from '@ionic/vue';
 
@@ -90,8 +89,8 @@ const deleteId = (id) => {
                 <tbody class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
                     <tr v-for="list_one in datavw.list">
                         <td class="px-1 py-4 text-sm font-normal text-[#637381]">{{list_one.title}}</td>
-                        <td class="px-1 py-4 text-sm font-normal text-[#637381]"><IonButton @click="() => router.navigate({ name: 'Post_prev', params: { id: list_one.id } },'forward','replace')">Edit</IonButton></td>
-                        <td class="px-1 py-4 text-sm font-normal text-[#637381]"><IonButton @click="deleteId(list_one.id)">Delete</IonButton></td>
+                        <td class="px-1 py-4 text-sm font-normal text-[#637381]"><button @click="() => router.navigate({ name: 'Post_prev', params: { id: list_one.id } },'forward','replace')">Edit</button></td>
+                        <td class="px-1 py-4 text-sm font-normal text-[#637381]"><button @click="deleteId(list_one.id)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
