@@ -3,7 +3,6 @@ import
 {
    IonContent,
    IonPage,
-   IonText,
 } from '@ionic/vue';
 import HeaderApp from './HeaderApp.vue';
 
@@ -28,11 +27,9 @@ import FooterApp from './FooterApp.vue';
           <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-          <IonText>
                     <h5 class="p-6 bg-white border-b border-gray-200">
                         Вы авторизовнны!
                     </h5>
-          </IonText>
                 </div>
             </div>
           </div>
